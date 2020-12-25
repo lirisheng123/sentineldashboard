@@ -1,0 +1,14 @@
+version: '3'
+services:
+  sentinel:
+    image: cike/sentinel-dashboard-1.7.2
+    container_name: sc-sentinel
+    networks:
+      - sc-net
+    ports:
+      # Port used for the Zipkin UI and HTTP Api
+      - 8080:8080
+
+networks:
+  sc-net:
+    external: false
